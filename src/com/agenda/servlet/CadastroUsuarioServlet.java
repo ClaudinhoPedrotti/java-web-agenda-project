@@ -10,24 +10,22 @@ import javax.servlet.http.HttpServletResponse;
 import com.agenda.model.Pessoa;
 import com.agenda.service.CadastroUsuarioService;
 
-public class CadastroUsuarioServlet extends HttpServlet{
+public class CadastroUsuarioServlet extends HttpServlet {
 
-	
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) 
+	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	 
-		
+
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome(request.getParameter("nome"));
 		pessoa.setEndereco(request.getParameter("endereco"));
 		pessoa.setEmail(request.getParameter("email"));
 		pessoa.setSenha(request.getParameter("senha"));
-		
+
 		CadastroUsuarioService service = new CadastroUsuarioService();
-		
+
 		service.cadastra(pessoa);
 	}
 

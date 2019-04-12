@@ -8,7 +8,6 @@ public class CadastroUsuarioService {
 	public void cadastra(Pessoa pessoa) {
 		PessoaDao userDAO = new PessoaDao();
 		userDAO.adiciona(pessoa);
-		
 
 	}
 
