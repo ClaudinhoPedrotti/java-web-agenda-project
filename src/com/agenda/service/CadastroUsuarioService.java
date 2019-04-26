@@ -10,16 +10,11 @@ public class CadastroUsuarioService {
 	public void cadastra(Pessoa pessoa) {
 		PessoaDao userDAO = new PessoaDao();
 		userDAO.adiciona(pessoa);
-		
-		System.out.println(buscaPessoas());
-		
-
 	}
-	
+
 	public List<Pessoa> buscaPessoas() {
 		PessoaDao dao = new PessoaDao();
 		return dao.buscaPessoas();
 	}
-	
 
 }

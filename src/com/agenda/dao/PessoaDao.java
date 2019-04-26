@@ -62,7 +62,6 @@ public class PessoaDao {
 			stmt.close();
 			this.connection.close();
 			
-			System.out.println(pessoas);
 			return pessoas;
 			
 		} catch (Exception e) {
