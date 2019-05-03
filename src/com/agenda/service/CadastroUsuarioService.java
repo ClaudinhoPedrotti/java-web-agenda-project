@@ -7,6 +7,8 @@ import com.agenda.model.Pessoa;
 
 public class CadastroUsuarioService {
 
+	private PessoaDao dao;
+
 	public void cadastra(Pessoa pessoa) {
 		PessoaDao userDAO = new PessoaDao();
 		userDAO.adiciona(pessoa);
@@ -16,5 +18,12 @@ public class CadastroUsuarioService {
 		PessoaDao dao = new PessoaDao();
 		return dao.buscaPessoas();
 	}
+
+	public void RemoverContato(Pessoa pessoa) {
+		this.dao.deleteContatos(pessoa);
+		
+		
+	}
+	
 
 }

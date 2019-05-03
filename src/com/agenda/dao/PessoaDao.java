@@ -68,4 +68,10 @@ public class PessoaDao {
 			throw new RuntimeException(e);
 		}
 	}
+
+	public void deleteContatos(Pessoa pessoa) {
+		
+
+		
+	}
 }

@@ -27,8 +27,7 @@ public class TabelaUsuarioServlet extends HttpServlet{
 		List<Pessoa> contatos = service.buscaPessoas();
 		
 		request.setAttribute("contatos", contatos);
-		
-		request.getRequestDispatcher("tabela-constato.jsp")
+		request.getRequestDispatcher("tabela-contato.jsp")
 		.forward(request, response);
 		
 		

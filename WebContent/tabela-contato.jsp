@@ -39,6 +39,7 @@
 				<th scope="col">Senha</th>
 				<th scope="col">Email</th>
 				<th scope="col">Endereço</th>
+				<th scope="col">Ações</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -49,6 +50,8 @@
 					<td>${pessoa.senha}</td>
 					<td>${pessoa.email}</td>
 					<td>${pessoa.endereco}</td>
+					<td><a href="excluir-contatos" class="badge badge-danger">Excluir</a></td>
+
 				</tr>
 			</c:forEach>
 		</tbody>
