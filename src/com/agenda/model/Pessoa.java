@@ -6,6 +6,7 @@ public class Pessoa {
 		String endereco;
 		String email;
 		String senha;
+		int id;
 
 		public String getNome() {
 			return nome;
@@ -33,6 +34,13 @@ public class Pessoa {
 		public void setSenha(String senha) {
 			this.senha = senha;
 		}
+		public int getId() {
+			return id;
+		}
+		public void setId(int id) {
+			this.id = id;
+		}
+		
 			
 	
 }

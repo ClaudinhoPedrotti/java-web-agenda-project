@@ -1,3 +1,6 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +30,7 @@
 			id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false">Menuzinho</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">Meu usuário</a> <a
+			<a class="dropdown-item" href="#">Meu usuÃ¡rio</a> <a
 				class="dropdown-item" href="#">Meus lembretes</a> <a
 				class="dropdown-item" href="#">Meus joguinhos</a>
 		</div>
@@ -40,13 +43,13 @@
 	<br>
 -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		
-		
+
+
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="tabela-contato.jsp">Table
-						<span class="sr-only">(current)</span>
+				<li class="nav-item active"><a class="nav-link"
+					href="busca-contatos">Table <span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 
@@ -59,16 +62,15 @@
 		</div>
 	</nav>
 
-
-<div class="p-3 mb-2 bg-danger text-white"></div>
-<div class="p-3 mb-2 bg-warning text-dark"></div>
-<div class="p-3 mb-2 bg-info text-white"></div>
+	<div class="p-3 mb-2 bg-danger text-white"></div>
+	<div class="p-3 mb-2 bg-warning text-dark"></div>
+	<div class="p-3 mb-2 bg-info text-white"></div>
 
 	<br>
 	<div class="container-fluid">
 		<form action="cadastro-usuario">
 			<div class="form-group">
-				<label for="exampleInputEmail1">Endereço de E-mail</label> <input
+				<label for="exampleInputEmail1">EndereÃ§o de E-mail</label> <input
 					type="email" class="form-control" name="email"
 					id="exampleInputEmail1" aria-describedby="emailHelp"
 					placeholder="E-mail"> <small id="emailHelp"
@@ -97,59 +99,18 @@
 					</div>
 
 				</div>
-			</div>
-			<!--  
-			</div>
-			<div class="form-group form-check">
-				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">Verificar</label>
-			</div>
-			<div class="form-group">
-				<div class="row">
-					<div class="col-sm-3"></div>
-					<div class="col-sm-3">
-						<label for="numero1"></label> <input type="numero1"
-							class="form-control" name="numero1" id="numero1"
-							aria-describedby="emailHelp" placeholder="numero1"
-							data-mask="999">
-					</div>
-
-					<div class="col-sm-3">
-						<label for="numero2"></label> <input type="numberl"
-							class="form-control" name="numero2" id="numero2"
-							aria-describedby="emailHelp" placeholder="numero2"
-							data-mask="999">
-					</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary">Enviar</button>
+					<a class="btn btn-primary" href="index.html">Sair</a>
 				</div>
-				<div class="form-group">
-					<div class="row">
-						<div class="col-sm-5"></div>
-						<div class="col-sm-2">
-							<label for="resultdo"></label> <input type="numero1"
-								class="form-control" name="numero1" id="numero1"
-								aria-describedby="emailHelp" placeholder="numero1"
-								data-mask="999999">
-						</div>
-						<div class="col-sm-"></div>
-					</div>
-					-->
-
-<div class="text-center">
-			<button type="submit" class="btn btn-primary">Enviar</button>
-			<a class="btn btn-primary" href="index.html">Sair</a>
-</div>
 		</form>
 	</div>
 
 
 
-<div class="p-3 mb-2 bg-danger text-white"></div>
-<div class="p-3 mb-2 bg-warning text-dark"></div>
-<div class="p-3 mb-2 bg-info text-white"></div>
-
-
-
-
+	<div class="p-3 mb-2 bg-danger text-white"></div>
+	<div class="p-3 mb-2 bg-warning text-dark"></div>
+	<div class="p-3 mb-2 bg-info text-white"></div>
 
 	<script src="js/jquery.js" type="text/javascript"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>

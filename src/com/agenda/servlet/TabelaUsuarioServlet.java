@@ -22,7 +22,7 @@ public class TabelaUsuarioServlet extends HttpServlet{
 	
 	protected void service (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-		service = new CadastroUsuarioService();
+		CadastroUsuarioService service = new CadastroUsuarioService();
 		
 		List<Pessoa> contatos = service.buscaPessoas();
 		
@@ -31,5 +31,9 @@ public class TabelaUsuarioServlet extends HttpServlet{
 		.forward(request, response);
 		
 		
+		
+		
+		
 	}
+	
 }

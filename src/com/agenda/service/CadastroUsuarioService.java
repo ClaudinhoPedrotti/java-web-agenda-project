@@ -20,8 +20,8 @@ public class CadastroUsuarioService {
 	}
 
 	public void RemoverContato(Pessoa pessoa) {
-		this.dao.deleteContatos(pessoa);
-		
+		PessoaDao dao = new PessoaDao();
+		dao.deleteContatos(pessoa);		
 		
 	}
 	

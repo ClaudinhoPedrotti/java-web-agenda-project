@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="adiciona-contato.html">Register</a>
+		<a class="navbar-brand" href="adiciona-contato.jsp">Register</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -34,7 +35,7 @@
 	<table class="table table-dark">
 		<thead>
 			<tr>
-				<th scope="col">#</th>
+
 				<th scope="col">Nome</th>
 				<th scope="col">Senha</th>
 				<th scope="col">Email</th>
@@ -45,12 +46,15 @@
 		<tbody>
 			<c:forEach var="pessoa" items="${contatos}">
 				<tr>
-					<th scope="row">1</th>
+
 					<td>${pessoa.nome}</td>
 					<td>${pessoa.senha}</td>
 					<td>${pessoa.email}</td>
 					<td>${pessoa.endereco}</td>
-					<td><a href="excluir-contatos" class="badge badge-danger">Excluir</a></td>
+					<td><a href="excluir-contatos?id=${pessoa.id}"
+						class="badge badge-danger">Excluir</a><a href="#"
+						class="badge badge-success">Editar</a></td>
+
 
 				</tr>
 			</c:forEach>

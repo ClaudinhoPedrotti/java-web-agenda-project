@@ -16,8 +16,11 @@ public class CadastroUsuarioServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
+	
 			throws ServletException, IOException {
-
+		
+		request.setCharacterEncoding("UTF-8");
+		
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome(request.getParameter("nome"));
 		pessoa.setEndereco(request.getParameter("endereco"));
@@ -27,6 +30,7 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		CadastroUsuarioService service = new CadastroUsuarioService();
 
 		service.cadastra(pessoa);
+		response.sendRedirect("busca-contatos");
 	}
 
 }
