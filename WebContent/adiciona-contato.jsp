@@ -1,5 +1,3 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +28,7 @@
 			id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
 			aria-expanded="false">Menuzinho</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">Meu usuÃ¡rio</a> <a
+			<a class="dropdown-item" href="#">Meu usuário</a> <a
 				class="dropdown-item" href="#">Meus lembretes</a> <a
 				class="dropdown-item" href="#">Meus joguinhos</a>
 		</div>
@@ -70,12 +68,12 @@
 	<div class="container-fluid">
 		<form action="cadastro-usuario">
 			<div class="form-group">
-				<label for="exampleInputEmail1">EndereÃ§o de E-mail</label> <input
+				<label for="exampleInputEmail1">Endereço de E-mail</label> <input
 					type="email" class="form-control" name="email"
 					id="exampleInputEmail1" aria-describedby="emailHelp"
 					placeholder="E-mail"> <small id="emailHelp"
-					class="form-text text-muted">Nós nunca vamos compartilhar
-					seu e-mail com mais ninguém.</small>
+					class="form-text text-muted">N�s nunca vamos compartilhar
+					seu e-mail com mais ningu�m.</small>
 			</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1">Senha</label> <input
