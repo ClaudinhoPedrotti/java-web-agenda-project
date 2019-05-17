@@ -25,5 +25,10 @@ public class CadastroUsuarioService {
 		
 	}
 	
+	public void alterarCadastro(Pessoa pessoa) {
+		PessoaDao dao = new PessoaDao();
+		dao.alterarCadastro(pessoa);
+	}
+	
 
 }

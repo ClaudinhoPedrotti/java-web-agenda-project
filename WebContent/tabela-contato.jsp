@@ -51,9 +51,8 @@
 					<td>${pessoa.senha}</td>
 					<td>${pessoa.email}</td>
 					<td>${pessoa.endereco}</td>
-					<td><a href="excluir-contatos?id=${pessoa.id}"
-						class="badge badge-danger">Excluir</a><a href="#"
-						class="badge badge-success">Editar</a></td>
+					<td><a href="excluir-contatos?id=${pessoa.id}" class="badge badge-danger">Excluir</a>
+						<a href="adiciona-contato.jsp?id=${pessoa.id}&nome=${pessoa.nome}&senha=${pessoa.senha}&email=${pessoa.email}&endereco=${pessoa.endereco}" class="badge badge-success">Editar</a></td>
 
 
 				</tr>

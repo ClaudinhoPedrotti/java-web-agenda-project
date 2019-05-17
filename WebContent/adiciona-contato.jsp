@@ -68,17 +68,18 @@
 	<div class="container-fluid">
 		<form action="cadastro-usuario">
 			<div class="form-group">
-				<label for="exampleInputEmail1">EndereÃ§o de E-mail</label> <input
+				<label for="exampleInputEmail1">Endereço de E-mail</label><input
 					type="email" class="form-control" name="email"
 					id="exampleInputEmail1" aria-describedby="emailHelp"
-					placeholder="E-mail"> <small id="emailHelp"
-					class="form-text text-muted">Nós nunca vamos compartilhar
-					seu e-mail com mais ninguém.</small>
+					placeholder="E-mail" value="${param.email}"> <small
+					id="emailHelp" class="form-text text-muted">Nós nunca vamos
+					compartilhar seu e-mail com mais ninguém.</small>
 			</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1">Senha</label> <input
 					type="password" class="form-control" name="senha"
-					id="exampleInputPassword1" placeholder="Senha">
+					id="exampleInputPassword1" value="${param.senha}"
+					placeholder="Senha">
 			</div>
 
 			<div class="form-group">
@@ -86,17 +87,20 @@
 					<div class="col-sm-2"></div>
 					<div class="col-sm-4">
 						<label for="name"></label> <input type="text" class="form-control"
-							name="nome" id="name" aria-describedby="name" placeholder="Name">
+							name="nome" id="name" aria-describedby="name"
+							value="${param.nome}" placeholder="Name">
 					</div>
 
 
 					<div class="col-sm-4">
 						<label for="endereco"></label> <input type="text"
 							class="form-control" name="endereco" id="endereco"
-							aria-describedby="emailHelp" placeholder="Adress">
+							aria-describedby="emailHelp" value="${param.endereco}"
+							placeholder="Adress">
 					</div>
 
 				</div>
+
 				<div class="text-center">
 					<button type="submit" class="btn btn-primary">Enviar</button>
 					<a class="btn btn-primary" href="index.html">Sair</a>
