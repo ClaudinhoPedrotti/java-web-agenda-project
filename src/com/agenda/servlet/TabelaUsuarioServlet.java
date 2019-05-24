@@ -19,8 +19,15 @@ public class TabelaUsuarioServlet extends HttpServlet {
 
 	private CadastroUsuarioService service;
 
-	@Override
-
+	public String execute(HttpServletRequest  request, HttpServletResponse response) throws Exception{
+		this.service = new CadastroUsuarioService();
+		List <Pessoa> contatos = this.service.buscaPessoas();
+		request.setAttribute("contatos", contatos);
+		return "tabela-contato.jsp";
+	}
+	
+	@Override 
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 

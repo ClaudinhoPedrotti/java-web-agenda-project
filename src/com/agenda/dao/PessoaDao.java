@@ -88,12 +88,12 @@ public class PessoaDao {
 
 	public void alterarCadastro(Pessoa pessoa) {
 
-		String SQL = "update pessoas set" 
-		+ "nome=?, " 
-		+ "email=?, " 
-		+ "endereco=?, " 
-		+ "senha=? ," 
-		+ "where id= ?";
+		String SQL = "update pessoa set " 
+		+ "nome=?," 
+		+ "email=?," 
+		+ "endereco=?," 
+		+ "senha=? " 
+		+ "where id=?";
 		
 		try {
 			this.connection = new ConnectionFactory().getConnection();

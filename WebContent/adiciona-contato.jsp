@@ -83,6 +83,10 @@
 			</div>
 
 			<div class="form-group">
+			
+			<input type="hidden" name="id" value="${param.id}">
+			
+			</div>
 				<div class="row">
 					<div class="col-sm-2"></div>
 					<div class="col-sm-4">
