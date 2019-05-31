@@ -11,22 +11,27 @@ import com.agenda.util.ConnectionFactory;
 
 public class PessoaDao {
 	private Connection connection;
+	private PreparedStatement stmt;
+	
+	public PessoaDao() {
+		this.connection = new ConnectionFactory().getConnection();
+		
+	}
 
 	public void adiciona(Pessoa pessoa) {
 		String SQL = "insert into pessoa (nome, email, endereco, senha, id) values (?, ?, ?, ?, ?)";
 
 		try {
-			this.connection = new ConnectionFactory().getConnection();
-			PreparedStatement stmt = this.connection.prepareStatement(SQL);
+			
+			this.connection.prepareStatement(SQL);
+			this.stmt.setString(1, pessoa.getNome());
+			this.stmt.setString(2, pessoa.getEmail());
+			this.stmt.setString(3, pessoa.getEndereco());
+			this.stmt.setString(4, pessoa.getSenha());
+			this.stmt.setInt(5, pessoa.getId());
 
-			stmt.setString(1, pessoa.getNome());
-			stmt.setString(2, pessoa.getEmail());
-			stmt.setString(3, pessoa.getEndereco());
-			stmt.setString(4, pessoa.getSenha());
-			stmt.setInt(5, pessoa.getId());
-
-			stmt.execute();
-			stmt.close();
+			this.stmt.execute();
+			this.stmt.close();
 
 			buscaPessoas();
 
@@ -39,8 +44,7 @@ public class PessoaDao {
 		String SQL = "select * from pessoa";
 
 		try {
-			this.connection = new ConnectionFactory().getConnection();
-			PreparedStatement stmt = this.connection.prepareStatement(SQL);
+			this.connection.prepareStatement(SQL);
 
 			List<Pessoa> pessoas = new ArrayList<Pessoa>();
 
@@ -59,7 +63,7 @@ public class PessoaDao {
 
 			}
 
-			stmt.close();
+			this.stmt.close();
 			this.connection.close();
 
 			return pessoas;
@@ -74,11 +78,10 @@ public class PessoaDao {
 		String SQL = "delete from pessoa where id=?";
 
 		try {
-			this.connection = new ConnectionFactory().getConnection();
-			PreparedStatement stmt = this.connection.prepareStatement(SQL);
-			stmt.setInt(1, pessoa.getId());
-			stmt.execute();
-			stmt.close();
+			this.connection.prepareStatement(SQL);
+			this.stmt.setInt(1, pessoa.getId());
+			this.stmt.execute();
+			this.stmt.close();
 
 		} catch (SQLException e) {
 
@@ -96,17 +99,16 @@ public class PessoaDao {
 		+ "where id=?";
 		
 		try {
-			this.connection = new ConnectionFactory().getConnection();
-			PreparedStatement stmt = this.connection.prepareStatement(SQL);
+			this.connection.prepareStatement(SQL);
 
-			stmt.setString(1, pessoa.getNome());
-			stmt.setString(2, pessoa.getEmail());
-			stmt.setString(3, pessoa.getEndereco());
-			stmt.setString(4, pessoa.getSenha());
-			stmt.setInt(5, pessoa.getId());
+			this.stmt.setString(1, pessoa.getNome());
+			this.stmt.setString(2, pessoa.getEmail());
+			this.stmt.setString(3, pessoa.getEndereco());
+			this.stmt.setString(4, pessoa.getSenha());
+			this.stmt.setInt(5, pessoa.getId());
 
-			stmt.execute();
-			stmt.close();
+			this.stmt.execute();
+			this.stmt.close();
 
 			alterarCadastro(pessoa);
 
